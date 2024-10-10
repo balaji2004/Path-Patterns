@@ -1,0 +1,31 @@
+function [caloriesBurned, carbonOffset, treesEquivalent] = calculateWalkingImpact(weight, steps)
+    % Function to calculate calories burned, carbon offset, and trees planted equivalent from walking
+    
+    % Constants
+    caloriesPerStep = 0.05;         % Average calories burned per step
+    co2PerMile = 404;               % Average CO2 emissions in grams per mile
+    co2PerTreePerYear = 109.22;     % Average CO2 absorption by a tree in kg/year
+
+    % Calculate distance walked (in miles)
+    distanceMiles = (steps * 2.5 / 5280); % Total distance walked in miles
+
+    % Calculate calories burned
+    caloriesBurned = steps * caloriesPerStep; % Total calories burned
+
+    % Calculate carbon offset (in grams of CO2)
+    carbonOffset = distanceMiles * co2PerMile; % Total carbon offset in grams
+    
+    % Convert carbon offset to trees equivalent (in number of trees)
+    treesEquivalent = carbonOffset / (co2PerTreePerYear * 1000); % Convert grams to kg
+
+    % Display the results
+    fprintf('Calories Burned: %.2f calories\n', caloriesBurned);
+    fprintf('Carbon Offset: %.2f grams CO2 (%.2f kg CO2)\n', carbonOffset, carbonOffset / 1000);
+    fprintf('Equivalent Trees Planted: %.2f trees\n', treesEquivalent);
+end
+
+
+
+
+
+%%
