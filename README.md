@@ -61,6 +61,12 @@ You can include an example graph of the walking route and sample output values (
 ---
 
 **Example Graph:**
+
+
+![Output Graph](img/graph.jpg)
+
+**Example Output**
+
 ![Output Graph](img/output.jpg)
 
 
