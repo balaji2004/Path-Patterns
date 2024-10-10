@@ -1,6 +1,3 @@
-
-
-```markdown
 # Walking Pattern & Environmental Impact Calculator
 
 This MATLAB program calculates walking patterns, step counts, and their environmental impact based on GPS data (latitude and longitude). It also provides an estimate of calories burned and the potential carbon offset equivalent to trees planted.
@@ -64,7 +61,7 @@ You can include an example graph of the walking route and sample output values (
 ---
 
 **Example Graph:**
-*img\output.jpg*
+*(img\output.jpge)*
 
 ---
 
@@ -80,6 +77,3 @@ Equivalent Trees Planted: 0.018517 🌱 trees
 ## License
 
 This project is open-source and free to use.
-```
-
-Just copy and paste this into a file named `README.md`, and it will work perfectly for your project!
