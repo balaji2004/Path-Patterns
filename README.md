@@ -50,7 +50,7 @@ This MATLAB program calculates walking patterns, step counts, and their environm
 
 2. **Run the Program:**
    - Load your sensor data into the workspace by replacing the line `load('clutch.mat')` with your own file, e.g., `load('mydata.mat')`.
-   - Execute the script to calculate the walking pattern, total steps, and environmental impact.
+   - Execute the main.m to calculate the walking pattern, total steps, and environmental impact.
    - Adjust the `weight` and `steps` variables as needed for a more personalized calculation of the environmental impact.
 
 ---
@@ -65,9 +65,7 @@ You can include an example graph of the walking route and sample output values (
 
 ![Output Graph](img/graph.jpg)
 
-**Example Output**
 
-![Output Graph](img/output.jpg)
 
 
 ---
