@@ -1,98 +1,85 @@
-<div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Path Patterns" />
 
-  &#xa0;
 
-  <!-- <a href="https://pathpatterns.netlify.app">Demo</a> -->
-</div>
+```markdown
+# Walking Pattern & Environmental Impact Calculator
 
-<h1 align="center">Path Patterns</h1>
+This MATLAB program calculates walking patterns, step counts, and their environmental impact based on GPS data (latitude and longitude). It also provides an estimate of calories burned and the potential carbon offset equivalent to trees planted.
 
-<p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/path-patterns?color=56BEB8">
+## Features
+- **Step Calculation:** Measures the total number of steps based on GPS data.
+- **Calories Burned:** Estimates calories burned based on user input for weight and step count.
+- **Carbon Offset:** Calculates the reduction in CO2 emissions based on the distance walked.
+- **Tree Equivalent:** Converts the carbon offset into an equivalent number of trees needed to offset that amount of CO2.
+- **Graphical Plot:** Visualizes the walking route on a map (latitude and longitude plot).
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/path-patterns?color=56BEB8">
+---
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/path-patterns?color=56BEB8">
+## How It Works
 
-  <img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/path-patterns?color=56BEB8">
+1. **Data Input:**
+   The program loads the sensor data (including latitude, longitude, and time) from a `.mat` file.
+   ```matlab
+   load('clutch.mat') % Replace 'clutch.mat' with your actual sensor data file
+   ```
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/path-patterns?color=56BEB8" /> -->
+2. **Time Calculation:**
+   The `timeElapsed` function converts the timestamps from your sensor data into a sequence of elapsed time values.
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/path-patterns?color=56BEB8" /> -->
+3. **Distance & Steps Calculation:**
+   Using the latitude and longitude data points, the program calculates the total distance traveled and then estimates the number of steps using an average stride length.
 
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/path-patterns?color=56BEB8" /> -->
-</p>
+4. **Environmental Impact Calculation:**
+   The program estimates the calories burned, CO2 emissions reduced, and the number of trees that would absorb an equivalent amount of CO2.
 
-<!-- Status -->
+5. **Graphical Output:**
+   The route is plotted, showing your path with markers indicating the start and end points.
 
-<!-- <h4 align="center"> 
-	🚧  Path Patterns 🚀 Under construction...  🚧
-</h4> 
+---
 
-<hr> -->
+## Requirements
 
-<p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
-</p>
+- MATLAB R2022a or later.
+- Sensor data obtained from MATLAB Mobile.
+- A `.mat` file containing GPS data, specifically `Position.latitude`, `Position.longitude`, and `Position.Properties.RowTimes`.
 
-<br>
+---
 
-## :dart: About ##
+## Instructions to Run
 
-Describe your project
+1. **Obtain Sensor Data from MATLAB Mobile:**
+   - Download the MATLAB Mobile app (available on Android and iOS).
+   - Start recording sensor data on your phone. This includes GPS data, accelerometer data, and timestamps.
+   - Upload the recorded data to MATLAB Cloud and download the `.mat` file to your desktop MATLAB environment.
 
-## :sparkles: Features ##
+2. **Run the Program:**
+   - Load your sensor data into the workspace by replacing the line `load('clutch.mat')` with your own file, e.g., `load('mydata.mat')`.
+   - Execute the script to calculate the walking pattern, total steps, and environmental impact.
+   - Adjust the `weight` and `steps` variables as needed for a more personalized calculation of the environmental impact.
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+---
 
-## :rocket: Technologies ##
+## Sample Output
+You can include an example graph of the walking route and sample output values (steps, distance, calories burned, carbon offset, trees planted equivalent) here.
 
-The following tools were used in this project:
+---
 
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+**Example Graph:**
+*img\output.jpg*
 
-## :white_check_mark: Requirements ##
+---
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
-
-## :checkered_flag: Starting ##
-
-```bash
-# Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/path-patterns
-
-# Access
-$ cd path-patterns
-
-# Install dependencies
-$ yarn
-
-# Run the project
-$ yarn start
-
-# The server will initialize in the <http://localhost:3000>
+**Sample Output:**
+```
+Calories Burned: 500 calories
+Carbon Offset: 2,020 grams CO2 (2.02 kg CO2)
+Equivalent Trees Planted: 0.018517 🌱 trees
 ```
 
-## :memo: License ##
+---
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+## License
 
+This project is open-source and free to use.
+```
 
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
-
-&#xa0;
-
-<a href="#top">Back to top</a>
+Just copy and paste this into a file named `README.md`, and it will work perfectly for your project!
