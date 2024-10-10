@@ -28,4 +28,9 @@ end
 
 
 
-%%
+%Execution%
+
+% Example usage
+weight = 150; % weight in pounds
+steps = 10000; % number of steps taken
+[calories, carbonOffset, trees] = calculateWalkingImpact(weight, steps);
