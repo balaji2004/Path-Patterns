@@ -61,7 +61,8 @@ You can include an example graph of the walking route and sample output values (
 ---
 
 **Example Graph:**
-![*(img\output.jpge)*]
+![Output Graph](img/output.jpg)
+
 
 ---
 
